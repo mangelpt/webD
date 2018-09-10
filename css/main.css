@@ -1,0 +1,920 @@
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4;
+}
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle;
+}
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #f2f2f2;
+}
+/**globales **/
+
+.contenedor {
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+/**media querys **/
+
+@media only screen and (min-width: 480px) {
+  .contenedor {
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contenedor {
+    width: 90%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contenedor {
+    width: 90%;
+  }
+}
+/** ------------------------------------------- **/
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+}
+
+h2::after {
+  content: "";
+  background-image: url(../img/separador.png);
+  margin: 0 auto;
+  height: 30px;
+  width: 100px;
+  display: block;
+}
+/** header***/
+
+div.hero {
+  background-image: url(../img/encabezado.jpg);
+  height: 90vh;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+div .contenido-header {
+  padding-top: 40px;
+}
+
+nav.redes-sociales {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+nav.redes-sociales a {
+  color: #fff;
+  font-size: 1.2em;
+  margin-right: 20px;
+}
+
+nav.redes-sociales a:last-child {
+  margin-right: 0;
+}
+
+div.informacion-evento {
+  text-align: center;
+  color: #fff;
+}
+
+div.informacion-evento p {
+  margin: 0;
+  display: inline;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+div.informacion-evento p i {
+  color: #fe4918;
+  font-size: 1.5em;
+}
+
+p.fecha {
+  float: left;
+}
+
+p.ciudad {
+  float: right;
+}
+
+.contenedor-direccion {
+  display: flex;
+  justify-content: space-around;
+}
+
+h1.nombre-sitio {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 2.5em;
+  font-family: "PT Sans", sans-serif;
+}
+/***media query***/
+
+@media only screen and (min-width: 768px) {
+  h1.nombre-sitio {
+    font-weight: 500;
+    font-size: 7vw;
+    line-height: 1;
+    margin: 0;
+    font-family: "PT Sans", sans-serif;
+  }
+  nav.redes-sociales a {
+    font-size: 1.7em;
+  }
+}
+
+p.slogan span {
+  color: #fe4918;
+  font-weight: bold;
+}
+/* ===== barra=======*/
+
+div.barra {
+  padding: 20px 0;
+  background: #353535;
+}
+
+div.logo {
+  width: 45%;
+}
+
+div.logo img {
+  width: 100%;
+}
+/***media query***/
+
+@media only screen and (min-width: 768px) {
+  div.logo {
+    width: 30%;
+  }
+}
+/*** navegacion principal***/
+
+nav.navegacion-principal {
+  display: none;
+}
+
+nav.navegacion-principal a {
+  font-family: "Oswald", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  transition: all 0.5s ease-in;
+  display: flex;
+}
+
+nav.navegacion-principal a:hover {
+  background-color: #fe4918;
+  border-radius: 12px;
+}
+
+nav.navegacion-principal a:last-child {
+  border: 2px solid #fe4918;
+  color: #fe4918;
+}
+
+nav.navegacion-principal a:last-child:hover {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 12px;
+}
+/***media query***/
+
+@media only screen and (min-width: 768px) {
+  nav.navegacion-principal {
+    width: 66.6%;
+    display: inline-block;
+    text-align: right;
+  }
+  nav.navegacion-principal a {
+    margin-right: 10px;
+    display: inline-block;
+    padding: 5px 0px;
+  }
+}
+/*** menu movil*****/
+
+div.menu-movil {
+  width: 50px;
+  display: block;
+  float: right;
+  text-align: right;
+  margin-top: 12px;
+}
+
+div.menu-movil span {
+  height: 7px;
+  margin-bottom: 5px;
+  background-color: #fff;
+  display: block;
+}
+
+div.menu-movil span:hover {
+  cursor: pointer;
+}
+/***media query***/
+
+@media only screen and (min-width: 768px) {
+  div.menu-movil {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  div.menu-movil {
+    width: 30px;
+    margin-top: 4px;
+    margin-right: 10px;
+  }
+  div.menu-movil span {
+    height: 5px;
+  }
+}
+/****  seccion*****/
+
+.contenedor-seccion {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+  grid-template-rows: 1fr;
+  padding: 25px 0;
+  margin: 0px 40px;
+}
+
+.contenedor-seccion {
+  font-size: 1.2em;
+}
+/********programa de evento*/
+
+section.programa {
+  position: relative;
+}
+
+div.contenedor-video {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+div.contenido-programa {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 10%;
+  width: 100%;
+}
+
+.programa-evento {
+  background-color: rgba(58, 203, 157, 0.8);
+  padding: 20px;
+}
+
+.programa-evento h2 {
+  text-align: center;
+}
+
+nav.menu-programa {
+  width: 100%;
+  border-bottom: 1px solid #fe4918;
+  padding-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 9px;
+}
+
+nav.menu-programa a {
+  text-decoration: none;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.3em;
+}
+
+nav.menu-programa a i {
+  color: #fe4918;
+  font-size: 1.7em;
+  margin-right: 8px;
+}
+/**** detalle evento*/
+
+div.detalle-evento {
+  border-bottom: 1px solid black;
+  font-family: "Oswald", sans-serif;
+}
+
+div.detalle-evento:nth-last-child(1) {
+  border-bottom: none;
+}
+
+div.detalle-evento p i {
+  color: #fe4918;
+  font-size: 1.5em;
+  margin-right: 8px;
+}
+
+.button {
+  background-color: #fe4918;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 7px 10px;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  border: none;
+  margin-top: 15px;
+  display: block;
+  float: right;
+  transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #e33000;
+}
+
+@media only screen and (min-width: 768px) {
+  div.info-curso {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  div.detalle-evento {
+    margin-right: 8px;
+  }
+  div.detalle-evento h3 {
+    font-family: "Oswald", sans-serif;
+  }
+  div.detalle-evento:nth-last-child(2) {
+    border-bottom: none;
+  }
+}
+/***imvitados*********/
+
+.invitados h2 {
+  text-align: center;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7px;
+  margin: 0 7px 20px 20px;
+  padding: 20px 0px;
+}
+
+.imagen p {
+  font-family: "Oswald", sans-serif;
+}
+
+.gallery img {
+  width: 100%;
+  filter: grayscale(1);
+  transition: all 0.6s ease-in-out;
+}
+
+.gallery img:hover {
+  width: 100%;
+  transform: scale(1.2);
+  filter: grayscale(0);
+  transition: all 0.4s ease-in-out;
+}
+
+.gallery .imagen:hover p {
+  bottom: -88px;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 480px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: 7px;
+    margin: 0 7px 20px 20px;
+    padding: 20px 0px;
+  }
+  .gallery img {
+    width: 100%;
+  }
+}
+
+div.imagen {
+  position: relative;
+  overflow: hidden;
+}
+
+div.imagen p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px 10px;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  color: #e33000;
+  text-transform: uppercase;
+}
+/**contador********************/
+
+div.contador {
+  background: #353535;
+  width: 100%;
+}
+
+.resumen-evento {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+}
+
+.resumen-evento li {
+  list-style: none;
+  color: #fff;
+  padding: 20px 0;
+  margin: 0 20px 0px 0px;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+}
+
+.resumen-evento li p {
+  color: #e33000;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 768px) {
+  .resumen-evento {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+  }
+  .resumen-evento li p {
+    font-size: 3.5em;
+  }
+}
+/**  precios  **/
+
+.contPrecio {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media only screen and (min-width: 480px) {
+  .contPrecio {
+    width: 99%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .contPrecio {
+    width: 99.7%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .contPrecio {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.precio {
+  text-align: center;
+}
+
+.tablaprecio {
+  width: 95.9%;
+  text-align: center;
+  border: 1px solid #e1e1e1;
+  background-color: #fff;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.tablaprecio h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+.ventajas {
+  margin: 5px;
+  padding: 25px;
+  display: grid;
+}
+
+.ventajas span {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+}
+
+.numero {
+  color: #000;
+  font-family: "Oswald", sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.button2 {
+  background-color: #fe4918;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  border: none;
+  transition: all 0.3s ease-in-out;
+  text-align-last: center;
+  display: inline block;
+  padding: 6px;
+}
+
+/* ========= MAPA==============*/
+
+div.mapa{
+
+    height: 420px;
+    background-color: green;
+}
+
+
+/* ========= testimoniales ==============*/
+.testimonios{
+    text-align: center;
+}
+blockquote{
+
+background-color: #fff;
+border: 1px solid #e1e1e1;
+margin: 0 0 10px 0;
+padding-bottom: 20px;
+}
+blockquote p{
+    text-align: left;
+    font-size: 1em;
+    font-family: "Oswald", sans-serif;
+    padding: 10px;
+}
+blockquote p::before{
+    content: "\201c";
+    font-size: 4em;
+    color: #e33000;
+    font-family: "Oswald", sans-serif;
+
+}
+
+footer.infot div {
+
+  border-radius: 50%;
+  width: 30%;
+  float: left;
+ margin-top: -9px;
+ margin-left: 5px;
+
+}
+footer.infot cite{
+text-align: center;
+  color: #e33000;
+  margin-left: 10px;
+  text-transform: uppercase;
+  padding-left: 10px;
+}
+
+footer.infot cite span{
+  color: #000;
+  margin-left: 10px;
+ 
+
+}
+/* ==========neswletter==========*/
+div.newsletter{
+
+background-image: url(../img/bg-newsletter.jpg);
+
+background-size: cover;
+background-attachment: fixed;
+text-align: center;
+}
+
+div.new {
+  padding: 40px;
+}
+div.new p{
+  font-family: "Oswald", sans-serif;
+  color: #e33000;
+  text-transform: uppercase;
+ font-size: 4vh;
+}
+div.new h3{
+
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-size: 7vh;
+
+}
+
+.button3{
+  text-decoration: none;
+
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  border: 1px solid #FFF;
+display: inline block;
+  padding: 7px;
+
+}
+
+.button3:hover{
+  background-color: #e33000; 
+  border: none;
+}
+
+/*----dias faltantes--*/
+.titu{
+text-align: center;
+margin-left: 40px;
+}
+.cuenta-regresiva{
+  width: 100%;
+  text-align: center;
+}
+.ulcont{
+  
+display: grid;
+grid-template-columns: repeat(2,1fr);
+
+}
+.ulcont li{
+  list-style: none;
+  color: #e33000 ;
+  font-size: 3vh;
+  font-family: "Oswald", sans-serif;
+}
+
+
+@media only screen and (min-width: 480px) {
+  .ulcont{
+  
+    display: flex;
+    justify-content: space-around;
+    
+    }
+
+}
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+  display: none !important;
+}
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+  /* 1 */
+}
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+  white-space: inherit;
+}
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+  visibility: hidden;
+}
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.clearfix:after {
+  clear: both;
+}
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+  pre {
+    white-space: pre-wrap !important;
+  }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group;
+  }
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+}
